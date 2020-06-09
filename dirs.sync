@@ -1,0 +1,25 @@
+#!/bin/bash
+
+SYNC_DIRS='
+.antigen.zsh
+.bashrc
+.gitconfig
+.*profile
+.zshrc
+.themes
+.icons
+.fonts
+.config
+.local
+'
+
+SYNC_FILTERS=(
+--filter="+ /.config/user-dirs.dirs"
+--filter="+ /.config/fontconfig/***"
+--filter="- /.config/**"
+
+--filter="+ /.local/share/backgrounds/***"
+--filter="+ /.local/share/gnome-shell"
+--filter="+ /.local/share/gnome-shell/extensions/***"
+--filter="- /.local/**"
+)
